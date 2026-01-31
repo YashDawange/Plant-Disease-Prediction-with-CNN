@@ -1,14 +1,13 @@
 # 🌿 Plant Disease Detection using Deep Learning (ResNet)
 
-This project focuses on classifying plant leaf diseases using a deep learning model based on the ResNet architecture.
-
-The goal is to assist in early identification of plant diseases using image-based analysis.
+This project implements a deep learning–based system for classifying plant leaf diseases using a ResNet Convolutional Neural Network (CNN).  
+It demonstrates an end-to-end machine learning workflow including data preprocessing, model training, evaluation, and analysis.
 
 ---
 
 ## 🚀 Live Demo
 
-An interactive web application for real-time prediction is deployed here:
+An interactive web application for real-time prediction is deployed on Hugging Face:
 
 👉 https://huggingface.co/spaces/YashDawange21/plant-disease-detector
 
@@ -16,51 +15,90 @@ An interactive web application for real-time prediction is deployed here:
 
 ## 📌 Project Overview
 
-- Image-based plant disease classification
-- Deep learning using Convolutional Neural Networks (CNNs)
-- End-to-end pipeline: preprocessing → training → inference → deployment
-- Practical analysis of real-world generalization challenges
+- Image-based plant disease classification  
+- ResNet-based CNN trained on the PlantVillage dataset  
+- Handling class imbalance using weighted sampling and loss weighting  
+- Extensive evaluation using multiple performance metrics  
+- Analysis of real-world generalization challenges  
 
 ---
 
 ## 🧠 Model Details
 
-- Architecture: ResNet (CNN)
-- Framework: PyTorch
-- Dataset: PlantVillage
-- Number of Classes: 38 plant disease categories
+- Architecture: ResNet50  
+- Framework: PyTorch  
+- Pretraining: ImageNet  
+- Number of Classes: 38 plant disease categories  
+- Input Size: 224 × 224  
 
 ---
 
-## 📂 Repository Contents
+## 🧪 Dataset
 
-- `notebooks/`  
-  - Training and evaluation notebook  
-- `requirements.txt`  
-  - Python dependencies  
+- Dataset: PlantVillage (Kaggle)
+- Image Type: Color leaf images
+- Dataset Characteristics:
+  - Controlled lighting
+  - Clean background
+  - Centered leaf images
+
+---
+
+## 🔧 Training Strategy
+
+- Data augmentation to improve robustness  
+- Class imbalance handled using:
+  - WeightedRandomSampler
+  - Class-weighted CrossEntropy loss  
+- Two-stage fine-tuning:
+  - Initial freezing of backbone
+  - Gradual unfreezing of deeper layers  
+- Label smoothing to reduce overconfidence  
+- Learning rate scheduling and early stopping  
 
 ---
 
-## ⚠️ Note on Model Performance
+## 📊 Model Performance (Validation Set)
 
-The model was trained on the PlantVillage dataset, which contains controlled images with uniform backgrounds.
+| Metric | Value |
+|------|------|
+| Accuracy | XX % |
+| Precision (weighted) | XX % |
+| Recall (weighted) | XX % |
+| F1-score (weighted) | XX % |
+| Top-3 Accuracy | XX % |
 
-As a result, performance may vary on real-world images due to differences in:
-- Lighting conditions
-- Background complexity
-- Image quality
-
-This highlights the importance of dataset diversity and domain adaptation in practical machine learning systems.
+> Metrics computed on a held-out validation dataset.
 
 ---
+
+## 📈 Evaluation & Analysis
+
+- Confusion matrix used to analyze class-wise performance  
+- Visually similar diseases show higher confusion  
+- Top-3 accuracy is significantly higher than top-1 accuracy, indicating effective ranking of predictions  
+
+---
+
+## ⚠️ Limitations
+
+The model was trained on a controlled dataset.  
+Performance on real-world images may vary due to:
+
+- Background clutter  
+- Lighting variations  
+- Camera angle and quality  
+
+This highlights the importance of dataset diversity and domain adaptation.
 
 ## 🛠 Tech Stack
 
-- Python
-- PyTorch
-- Torchvision
-- NumPy
-- Matplotlib
+- Python  
+- PyTorch  
+- Torchvision  
+- NumPy  
+- Scikit-learn  
+- Matplotlib  
 
 ---
 
