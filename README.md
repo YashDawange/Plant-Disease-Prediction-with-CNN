@@ -1,50 +1,70 @@
-# 🌿 Plant Disease Detection using ResNet (PyTorch)
+# 🌿 Plant Disease Detection using Deep Learning (ResNet)
 
-This project focuses on detecting plant leaf diseases using a ResNet-based Convolutional Neural Network trained on the PlantVillage dataset.
+This project focuses on classifying plant leaf diseases using a deep learning model based on the ResNet architecture.
 
-The notebook covers the full deep learning pipeline including data preprocessing, model training, evaluation, and prediction.
+The goal is to assist in early identification of plant diseases using image-based analysis.
 
 ---
 
-## 🚀 Project Overview
+## 🚀 Live Demo
 
-Plant diseases can significantly reduce agricultural productivity. This project applies deep learning to automatically classify plant leaf diseases from images.
+An interactive web application for real-time prediction is deployed here:
 
-The model is trained to recognize multiple disease categories and healthy leaves.
+👉 https://huggingface.co/spaces/YashDawange21/plant-disease-detector
+
+---
+
+## 📌 Project Overview
+
+- Image-based plant disease classification
+- Deep learning using Convolutional Neural Networks (CNNs)
+- End-to-end pipeline: preprocessing → training → inference → deployment
+- Practical analysis of real-world generalization challenges
 
 ---
 
 ## 🧠 Model Details
 
-- Architecture: ResNet (Transfer Learning)
+- Architecture: ResNet (CNN)
 - Framework: PyTorch
-- Image Size: 224×224
-- Dataset: PlantVillage (Kaggle)
-- Task: Multi-class image classification
-- Total Classes: 38
+- Dataset: PlantVillage
+- Number of Classes: 38 plant disease categories
 
 ---
 
-## 📊 Workflow
+## 📂 Repository Contents
 
-1. Data Loading (ImageFolder)
-2. Data Preprocessing & Augmentation
-3. Transfer Learning using ResNet
-4. Model Training
-5. Validation & Accuracy Evaluation
-6. Disease Prediction
+- `notebooks/`  
+  - Training and evaluation notebook  
+- `requirements.txt`  
+  - Python dependencies  
+
+---
+
+## ⚠️ Note on Model Performance
+
+The model was trained on the PlantVillage dataset, which contains controlled images with uniform backgrounds.
+
+As a result, performance may vary on real-world images due to differences in:
+- Lighting conditions
+- Background complexity
+- Image quality
+
+This highlights the importance of dataset diversity and domain adaptation in practical machine learning systems.
 
 ---
 
 ## 🛠 Tech Stack
 
-- Python  
-- PyTorch  
-- Torchvision  
-- NumPy  
-- Matplotlib  
+- Python
+- PyTorch
+- Torchvision
+- NumPy
+- Matplotlib
 
 ---
 
-## 📂 Files
+## 👨‍💻 Author
 
+**Yash Dawange**  
+Biomedical Engineering | AI & Machine Learning Enthusiast
