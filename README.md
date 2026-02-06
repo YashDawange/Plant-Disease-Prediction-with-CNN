@@ -103,12 +103,3 @@ This highlights the challenge of **domain shift** in real-world deployment.
 {Python, PyTorch, Torchvision, NumPy, Scikit-learn, Matplotlib, PIL, Gradio, Kaggle API}
 
 ---
-
-## 📁 Repository Structure
-
-```text
-├── plant_disease_project_using_pytorch.ipynb
-├── app.py
-├── best_model.pt
-├── requirements.txt
-└── README.md
